@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            background: #007bff;
+            color: white;
+        }
+        .hero h2 {
+            margin: 0;
+        }
+        .hero p {
+            margin: 1rem 0;
+        }
+        .hero button {
+            padding: 0.5rem 1rem;
+            background: #fff;
+            color: #007bff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .hero button:hover {
+            background: #0056b3;
+            color: #fff;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+            background: #fff;
+        }
+        .feature {
+            text-align: center;
+            max-width: 300px;
+        }
+        .feature h3 {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Landing Page</h1>
+    </header>
+    <section class="hero">
+        <h2>Your Journey Starts Here</h2>
+        <p>Discover amazing features and opportunities with us.</p>
+        <button onclick="learnMore()">Learn More</button>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h3>Feature 1</h3>
+            <p>Explore the amazing benefits of our platform.</p>
+        </div>
+        <div class="feature">
+            <h3>Feature 2</h3>
+            <p>Experience seamless integration and performance.</p>
+        </div>
+        <div class="feature">
+            <h3>Feature 3</h3>
+            <p>Join a community of like-minded individuals.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Landing Page. All rights reserved.</p>
+    </footer>
+    <script>
+        function learnMore() {
+            alert('Thank you for your interest! More details coming soon.');
+        }
+    </script>
+</body>
+</html>
