@@ -11,6 +11,15 @@ app.get('/',(req,res)=>{
     res.render('index');
 });
 
+app.get("/profile/:username",function(req,res){
+    res.send(`Hello ${req.params.username}`);
+});
+
+app.get("/auther/:username/:age",function(req,res){
+    res.send(`Hello ${req.params.username} and your age is ${req.params.age}`);
+});
+
+
 app.listen(3000,()=>{
     console.log('Server is running on port 3000 : http://localhost:3000');
 }   );
