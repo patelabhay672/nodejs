@@ -6,9 +6,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Task Details</title>
   </head>
-  <body class="bg-gradient-to-br from-gray-900 to-gray-100 text-white min-h-screen">
+  <body
+    class="bg-gradient-to-br from-gray-900 to-gray-100 text-white min-h-screen"
+  >
     <div class="max-w-2xl mx-auto py-10 px-6">
-      
       <!-- Back Link -->
       <a
         href="/"
@@ -20,7 +21,9 @@
       <!-- Task Card -->
       <div class="bg-zinc-800 p-6 rounded-2xl shadow-lg space-y-6">
         <div>
-          <h1 class="text-3xl font-bold mb-2 break-all text-blue-300"><%= file %></h1>
+          <h1 class="text-3xl font-bold mb-2 break-all text-blue-300">
+            <%= file %>
+          </h1>
           <p class="text-lg text-gray-300 whitespace-pre-line"><%= data %></p>
         </div>
 
@@ -42,13 +45,32 @@
             rows="5"
             class="w-full p-3 rounded-lg bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Update your task details..."
-          ><%= data %></textarea>
+          >
+<%= data %></textarea
+          >
 
           <button
             type="submit"
             class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg text-lg font-semibold transition"
           >
             ✏️ Update Task
+          </button>
+        </form>
+        
+        <!-- Rename Task Form -->
+        <form action="/rename-task/<%= file %>" method="POST" class="mt-5">
+          <input
+            type="text"
+            name="newFilename"
+            placeholder="Enter new filename"
+            required
+            class="w-full p-2 mb-2 border rounded text-black"
+          />
+          <button
+            type="submit"
+            class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded"
+          >
+            ✏️ Rename Task
           </button>
         </form>
       </div>

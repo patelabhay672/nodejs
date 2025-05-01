@@ -57,6 +57,21 @@ app.post("/update-task/:filename", (req, res) => {
   );
 });
 
+app.post("/rename-task/:filename", (req, res) => {
+    const oldPath = `./files/${req.params.filename}`;
+    const newPath = `./files/${req.body.newFilename}`;
+  
+    fs.rename(oldPath, newPath, function (err) {
+      if (err) {
+        console.log(err);
+        res.send("Error renaming file");
+      } else {
+        res.redirect(`/file/${req.body.newFilename}`);
+      }
+    });
+  });
+  
+
 app.post("/create", (req, res) => {
   fs.writeFile(
     `./files/${req.body.title.split(" ").join("_")}.txt`,
