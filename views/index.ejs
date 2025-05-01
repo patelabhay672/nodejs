@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Our Landing Page</h1>
-        <%= 2+9 %>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Task Writer</title>
+  </head>
+  <body class="bg-gradient-to-br from-gray-900 to-gray-100 text-white min-h-screen">
+    <main class="flex flex-col items-center justify-center min-h-screen px-4 space-y-10">
+      
+      <!-- Add Task Form -->
+      <form
+        action="/create"
+        method="POST"
+        class="bg-white text-gray-900 shadow-xl rounded-2xl p-8 w-full max-w-md space-y-6"
+      >
+        <h2 class="text-2xl font-bold text-center text-blue-700">📝 Add a New Task</h2>
 
-    <script src="/javascripts/script.js"></script>
-</body>
+        <div>
+          <label for="title" class="block text-sm font-semibold mb-1">Task Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            required
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label for="description" class="block text-sm font-semibold mb-1">Task Description</label>
+          <textarea
+            id="description"
+            name="details"
+            rows="4"
+            required
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition"
+        >
+          ➕ Add Task
+        </button>
+      </form>
+
+      <!-- View Task List Button -->
+      <a
+        href="/all-tasks"
+        class="bg-blue-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition"
+      >
+        📄 View Task List
+      </a>
+    </main>
+  </body>
 </html>
